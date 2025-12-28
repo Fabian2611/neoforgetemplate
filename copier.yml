@@ -38,11 +38,6 @@ main_class:
   help: "Main mod class name. Example: MyCoolMod"
   default: "{{ mod_id|replace('-', '_')|replace(' ', '_')|title|replace('_', '') }}"
 
-mod_version:
-  type: str
-  help: "Mod version"
-  default: "0.1.0"
-
 mod_description:
   type: str
   help: "Short description"

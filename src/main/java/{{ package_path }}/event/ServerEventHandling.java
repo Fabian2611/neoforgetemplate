@@ -1,4 +1,4 @@
-package {{ package_name }}.event;
+package {{ java_package }}.event;
 
 import {{ package_name }}.{{ main_class }};
 import net.minecraftforge.fml.common.Mod;

@@ -1,4 +1,4 @@
-package {{ package_name }}.block;
+package {{ java_package }}.block;
 
 import {{ package_name }}.{{ main_class }};
 import {{ package_name }}.item.ModItems;

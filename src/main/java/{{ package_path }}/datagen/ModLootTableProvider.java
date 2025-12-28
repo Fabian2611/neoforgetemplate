@@ -1,4 +1,4 @@
-package {{ package_name }}.datagen;
+package {{ java_package }}.datagen;
 
 import {{ package_name }}.datagen.loot.ModBlockLootTables;
 import net.minecraft.data.PackOutput;

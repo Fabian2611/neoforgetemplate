@@ -1,4 +1,4 @@
-package {{ package_name }}.datagen.loot;
+package {{ java_package }}.datagen.loot;
 
 import {{ package_name }}.block.ModBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;

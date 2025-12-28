@@ -1,4 +1,4 @@
-package {{ package_name }};
+package {{ java_package }};
 
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;

@@ -17,22 +17,26 @@ mod_id:
 mod_name:
   type: str
   help: "Display name shown to users. Example: My Cool Mod"
-  default: "{{ mod_id.replace('_', ' ').replace('-', ' ').title() }}"
+  default: "{{ mod_id|replace('_', ' ')|replace('-', ' ')|title }}"
 
 base_package:
   type: str
-  help: "Maven group / Gradle group. Example: io.fabiambuthere"
+  help: "Maven group / base package prefix. Example: io.fabianbuthere"
   default: "io.fabianbuthere"
+
+java_package:
+  type: str
+  help: "Java base package. Example: io.fabianbuthere.mycoolmod"
+  default: "{{ base_package }}.{{ mod_id|replace('-', '_') }}"
 
 package_path:
   type: str
-  help: "Java base package. Example: io.fabiambuthere.mycoolmod"
-  default: "{{ base_package }}.{{ mod_id.replace('-', '_') }}"
+  default: "{{ java_package|replace('.', '/') }}"
 
 main_class:
   type: str
   help: "Main mod class name. Example: MyCoolMod"
-  default: "{{ ''.join([p.title() for p in mod_id.replace('-', '_').split('_')]) }}"
+  default: "{{ mod_id|replace('-', '_')|replace(' ', '_')|title|replace('_', '') }}"
 
 mod_version:
   type: str

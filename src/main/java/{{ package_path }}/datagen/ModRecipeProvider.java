@@ -1,4 +1,4 @@
-package {{ package_name }}.datagen;
+package {{ java_package }}.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;

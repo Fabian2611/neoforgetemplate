@@ -1,4 +1,4 @@
-package {{ package_name }}.item;
+package {{ java_package }}.item;
 
 import {{ package_name }}.{{ main_class }};
 import net.minecraft.world.item.Item;

@@ -1,5 +1,7 @@
 _min_copier_version: "9.0.0"
 
+_templates_suffix: ".j2"
+
 _exclude:
   - ".github"
   - ".git"
@@ -9,6 +11,7 @@ _exclude:
   - ".gradle"
   - "out"
   - "run"
+  - "copier.yml"
 
 mod_id:
   type: str

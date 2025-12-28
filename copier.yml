@@ -1,0 +1,45 @@
+_min_copier_version: "9.0.0"
+
+_exclude:
+  - ".github"
+  - ".git"
+  - ".idea"
+  - "*.iml"
+  - "build"
+  - ".gradle"
+  - "out"
+  - "run"
+
+mod_id:
+  type: str
+  help: "Mod ID (lowercase, digits, underscore). Example: my_cool_mod"
+
+mod_name:
+  type: str
+  help: "Display name shown to users. Example: My Cool Mod"
+  default: "{{ mod_id.replace('_', ' ').replace('-', ' ').title() }}"
+
+base_package:
+  type: str
+  help: "Maven group / Gradle group. Example: io.fabiambuthere"
+  default: "io.fabianbuthere"
+
+package_path:
+  type: str
+  help: "Java base package. Example: io.fabiambuthere.mycoolmod"
+  default: "{{ base_package }}.{{ mod_id.replace('-', '_') }}"
+
+main_class:
+  type: str
+  help: "Main mod class name. Example: MyCoolMod"
+  default: "{{ ''.join([p.title() for p in mod_id.replace('-', '_').split('_')]) }}"
+
+mod_version:
+  type: str
+  help: "Mod version"
+  default: "0.1.0"
+
+mod_description:
+  type: str
+  help: "Short description"
+  default: ""
